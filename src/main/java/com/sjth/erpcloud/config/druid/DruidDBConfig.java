@@ -12,10 +12,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 @Configuration
-public class DruidConfig {
-	private Logger logger = LoggerFactory.getLogger(DruidConfig.class);
+public class DruidDBConfig {
+	private Logger logger = LoggerFactory.getLogger(DruidDBConfig.class);
 	
     @Value("${spring.datasource.url}")
     private String dbUrl;
@@ -102,5 +103,10 @@ public class DruidConfig {
     	datasource.setConnectionProperties(connectionProperties);
     	
     	return datasource;
+    }
+    //配置事务管理器
+    @Bean
+    public DataSourceTransactionManager transactionManagera(){
+        return new DataSourceTransactionManager(dataSource());
     }
 }

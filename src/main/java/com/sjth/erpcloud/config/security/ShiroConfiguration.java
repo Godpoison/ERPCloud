@@ -1,4 +1,4 @@
-package com.sjth.erpcloud.config.shiro;
+package com.sjth.erpcloud.config.security;
  
 import java.util.LinkedHashMap;
 

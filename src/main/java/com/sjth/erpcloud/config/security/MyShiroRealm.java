@@ -1,4 +1,4 @@
-package com.sjth.erpcloud.config.shiro;
+package com.sjth.erpcloud.config.security;
  
 import java.util.Collection;
 import java.util.HashSet;
@@ -8,12 +8,10 @@ import com.sjth.erpcloud.module.auth.entity.AuthUser;
 import com.sjth.erpcloud.module.auth.entity.Permission;
 import com.sjth.erpcloud.module.auth.entity.Role;
 import com.sjth.erpcloud.module.auth.service.AuthUserService;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
-import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
