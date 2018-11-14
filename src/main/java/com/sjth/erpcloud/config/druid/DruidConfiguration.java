@@ -23,7 +23,7 @@ public class DruidConfiguration {
         log.info("init Druid Servlet Configuration");
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
         servletRegistrationBean.setServlet(new StatViewServlet());
-        servletRegistrationBean.addUrlMappings("/Druid/*");
+        servletRegistrationBean.addUrlMappings("/druid/*");
         Map<String, String> initParameters = new HashMap<String, String>();
         initParameters.put("loginUsername", "admin");//用户名
         initParameters.put("loginPassword", "admin");//密码
